@@ -1,0 +1,10 @@
+# Папки
+bin/
+obj/
+debug/
+.vs/
+
+# Файлы
+*.exe
+*.dll
+*.pdb

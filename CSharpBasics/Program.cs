@@ -24,24 +24,24 @@ namespace CSharpBasics
 
             ////Первый вариант
 
-            //int a = 5;
-            //double b = 5.56;
-            //char c = 'c';
-            //bool d = false;
-            //string e = "Hello";
-            //Console.WriteLine($"5 Переменных различныйх типов: \n" + $"Целочисленный: {a} \n" + $"Значения с точкой: {b} \n" + $"Символьный: {c}  \n" + $"Логический: {d}  \n" + $"Ссылочный: {e}  \n");
+            int a = 5;
+            double b = 5.56;
+            char c = 'c';
+            bool d = false;
+            string e = "Hello";
+            Console.WriteLine($"5 Переменных различныйх типов: \n" + $"Целочисленный: {a} \n" + $"Значения с точкой: {b} \n" + $"Символьный: {c}  \n" + $"Логический: {d}  \n" + $"Ссылочный: {e}  \n");
 
-            ////Второй вариант Вывода
+            //Второй вариант Вывода
 
-            //Console.WriteLine("5 Переменных различныйх типов:");
-            //Console.WriteLine("int: " + a);
-            //Console.WriteLine("double: " + b);
-            //Console.WriteLine("char: " + c);
-            //Console.WriteLine("bool: " + d);
-            //Console.WriteLine("string: " + e);
+            Console.WriteLine("5 Переменных различныйх типов:");
+            Console.WriteLine("int: " + a);
+            Console.WriteLine("double: " + b);
+            Console.WriteLine("char: " + c);
+            Console.WriteLine("bool: " + d);
+            Console.WriteLine("string: " + e);
 
-            //Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
-            //Console.ReadLine();
+            Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
+            Console.ReadLine();
         }
 
         public void Task_2()

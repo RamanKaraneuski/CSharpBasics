@@ -19,11 +19,11 @@
             }
             else if (number % 2 == 0)
             {
-                Console.WriteLine("tutti");
+                Console.WriteLine("tutti"); 
             }
             else if (number % 5 == 0)
             {
-                Console.WriteLine("frutti");
+                Console.WriteLine("frutti"); 
             }
 
             Console.WriteLine("\nPress Enter to continue\n");

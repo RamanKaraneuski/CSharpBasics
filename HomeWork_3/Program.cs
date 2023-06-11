@@ -32,6 +32,7 @@
 
         static void CheckNumberMethod_2()
         {
+
             Console.Write("Enter the first number: ");
             int number1 = Convert.ToInt32(Console.ReadLine());
 
@@ -66,6 +67,7 @@
 
             Console.WriteLine("\nPress Enter to continue\n");
             Console.ReadLine();
+
         }
 
         static void CheckNumberMethod_3()

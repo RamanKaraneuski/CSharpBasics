@@ -29,6 +29,7 @@
 
             Console.WriteLine("\nPress Enter to continue\n");
             Console.ReadLine();
+
         }
 
         static void CheckNumberMethod_2()

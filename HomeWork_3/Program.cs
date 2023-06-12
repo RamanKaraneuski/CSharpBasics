@@ -10,6 +10,7 @@
         }
         static void CheckNumberMethod_1()
         {
+
             Console.Write("Enter the number: ");
             int number = Convert.ToInt32(Console.ReadLine());
 

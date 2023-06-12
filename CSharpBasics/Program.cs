@@ -23,7 +23,7 @@ namespace CSharpBasics
         {
 
 
-
+     
             //Первый вариант
 
             int a = 5;

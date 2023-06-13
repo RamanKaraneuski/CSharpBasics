@@ -46,25 +46,7 @@
                 return;
             }
 
-            for (int i = numberOne; i <= numberTwo; i++)
-            {
-                if (i % 2 == 0 && i % 5 == 0)
-                {
-                    Console.WriteLine("Tutti-Frutti");
-                }
-                else if (i % 2 == 0)
-                {
-                    Console.WriteLine("Tutti");
-                }
-                else if (i % 5 == 0)
-                {
-                    Console.WriteLine("Frutti");
-                }
-                else
-                {
-                    Console.WriteLine($"Number {i} can’t be divided on 2 or 5");
-                }
-            }
+            PrintNumbersInRange(numberOne, numberTwo);
 
             Console.WriteLine("\nPress Enter to continue\n");
             Console.ReadLine();
@@ -105,6 +87,7 @@
                     Console.WriteLine($"Number {i} can’t be divided on 2 or 5");
                 }
             }
+
         }
 
     }

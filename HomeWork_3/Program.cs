@@ -87,7 +87,6 @@
                     Console.WriteLine($"Number {i} can’t be divided on 2 or 5");
                 }
             }
-
         }
 
     }

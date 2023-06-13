@@ -34,20 +34,19 @@
 
         static void CheckNumberMethod_2()
         {
-
             Console.Write("Enter the first number: ");
-            int number1 = Convert.ToInt32(Console.ReadLine());
+            int numberOne = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Enter the second number (greater than the first): ");
-            int number2 = Convert.ToInt32(Console.ReadLine());
+            int numberTwo = Convert.ToInt32(Console.ReadLine());
 
-            if (number1 >= number2)
+            if (numberOne >= numberTwo)
             {
                 Console.WriteLine("Error! The first number must be less than the second.");
                 return;
             }
 
-            for (int i = number1 + 1; i < number2; i++)
+            for (int i = numberOne; i <= numberTwo; i++)
             {
                 if (i % 2 == 0 && i % 5 == 0)
                 {
@@ -74,13 +73,18 @@
         static void CheckNumberMethod_3()
         {
             Console.Write("Enter the first number: ");
-            int number1 = Convert.ToInt32(Console.ReadLine());
+            int numberOne = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Enter the second number: ");
-            int number2 = Convert.ToInt32(Console.ReadLine());
+            int numberTwo = Convert.ToInt32(Console.ReadLine());
 
-            int minNumber = Math.Min(number1, number2);
-            int maxNumber = Math.Max(number1, number2);
+            PrintNumbersInRange(numberOne, numberTwo);
+        }
+
+        static void PrintNumbersInRange(int start, int end)
+        {
+            int minNumber = Math.Min(start, end);
+            int maxNumber = Math.Max(start, end);
 
             for (int i = minNumber; i <= maxNumber; i++)
             {

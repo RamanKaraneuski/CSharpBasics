@@ -31,7 +31,6 @@
             Console.ReadLine();
 
         }
-
         static void CheckNumberMethod_2()
         {
             Console.Write("Enter the first number: ");
@@ -60,15 +59,18 @@
             Console.Write("Enter the second number: ");
             int numberTwo = Convert.ToInt32(Console.ReadLine());
 
-            PrintNumbersInRange(numberOne, numberTwo);
+            int minNumber = Math.Min(numberOne, numberTwo);
+            int maxNumber = Math.Max(numberOne, numberTwo);
+
+            PrintNumbersInRange(minNumber, maxNumber);
+
+            Console.WriteLine("\nPress Enter to continue\n");
+            Console.ReadLine();
         }
 
         static void PrintNumbersInRange(int start, int end)
         {
-            int minNumber = Math.Min(start, end);
-            int maxNumber = Math.Max(start, end);
-
-            for (int i = minNumber; i <= maxNumber; i++)
+            for (int i = start; i <= end; i++)
             {
                 if (i % 2 == 0 && i % 5 == 0)
                 {
@@ -90,4 +92,5 @@
         }
 
     }
+
 }

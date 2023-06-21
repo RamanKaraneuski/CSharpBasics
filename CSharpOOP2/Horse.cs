@@ -1,44 +1,34 @@
 ﻿using System;
 
-public class Horse
+namespace CSharpOOP
 {
-    public string Color { get; set; }
-    public int Age { get; set; }
-    public string Breed { get; set; }
-    public double ManeLength { get; set; }
-    public bool IsVaccinated { get; set; }
-
-    public void UpdateVaccinationStatus(int daysSinceLastVaccination)
+    public class Horse
     {
-        if (daysSinceLastVaccination > 365)
+        // Fields of class "Horse"
+        public string Color;
+        public int Age;
+        public string Breed;
+        public double ManeLength;
+        public bool IsVaccinated;
+
+        // Method that changes the value of the "IsVaccinated" field
+        public void UpdateVaccinationStatus(int daysSinceLastVaccination)
         {
-            IsVaccinated = false;
-            Console.WriteLine("The horse's vaccination status has been updated to not vaccinated.");
+            if (daysSinceLastVaccination > 365)
+                IsVaccinated = false;
+            else
+                IsVaccinated = true;
         }
-        else
+
+        // Method that outputs data to the console
+        public void DisplayDetails()
         {
-            IsVaccinated = true;
-            Console.WriteLine("The horse's vaccination status has been updated to vaccinated.");
+            Console.WriteLine("Horse Details:");
+            Console.WriteLine("Color: " + Color);
+            Console.WriteLine("Age: " + Age);
+            Console.WriteLine("Breed: " + Breed);
+            Console.WriteLine("Mane Length: " + ManeLength + " meters");
+            Console.WriteLine("Vaccination Status: " + (IsVaccinated ? "Vaccinated" : "Not Vaccinated"));
         }
-    }
-
-    public void PublicMethod()
-    {
-        Console.WriteLine("This is a public method.");
-    }
-
-    private void PrivateMethod()
-    {
-        Console.WriteLine("This is a private method.");
-    }
-
-    internal void InternalMethod()
-    {
-        Console.WriteLine("This is an internal method.");
-    }
-
-    internal static void InternalMethodCaller(Horse horse)
-    {
-        horse.InternalMethod();
     }
 }

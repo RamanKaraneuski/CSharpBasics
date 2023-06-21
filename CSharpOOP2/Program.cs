@@ -1,131 +1,155 @@
-﻿namespace CSharpOOP2
+﻿using System;
+
+namespace CSharpOOP
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Horse myHorse = new Horse
+            #region Task 1: Creating an instance of the "Table" class
+
+            Console.WriteLine("--------------Task 1--------------");
+            Table myTable = new Table();
+            myTable.Material = "Wood";
+            myTable.LegsCount = 4;
+            myTable.IsFoldable = true;
+
+            myTable.DisplayDetails();
+
+            #endregion
+
+            #region Task 2: Creating an instance of the class "Horse"
+
+            Console.WriteLine("--------------Task 2--------------");
+            Horse myHorse = new Horse();
+            myHorse.Color = "Black";
+            myHorse.Age = 8;
+            myHorse.Breed = "Arabian";
+            myHorse.ManeLength = 0.8;
+            myHorse.IsVaccinated = true;
+
+            myHorse.DisplayDetails();
+
+            #endregion
+
+            #region Task 3: Method for changing the grafting status for an instance of the "Horse" class
+
+            Console.WriteLine("--------------Task 3--------------");
+            myHorse.UpdateVaccinationStatus(400);
+            myHorse.DisplayDetails();
+
+            #endregion
+
+            #region Task 4: Creation of the 1st instance of the class "Table" with the initialization of the fields
+
+            Console.WriteLine("--------------Task 4--------------");
+            Table myTableOne = new Table
             {
-                Color = "Black",
-                Age = 8,
-                Breed = "Arabian",
-                IsVaccinated = false
+                Material = "Wood",
+                LegsCount = 4,
+                IsFoldable = true
             };
 
-            myHorse.ManeLength = 0.5;
+            myTableOne.DisplayDetails();
 
-            Horse myHorseOne = new Horse
+            #endregion
+
+            #region Task 5: Creating the 2nd instance of the "Table" class using the constructor and initializing the fields
+
+            Console.WriteLine("--------------Task 5--------------");
+            Table myTableTwo = new Table
             {
-                Color = "Black",
-                Age = 8,
-                Breed = "Arabian",
-                ManeLength = 0.8,
-                IsVaccinated = false
+                Material = "Plastic",
+                LegsCount = 3,
+                IsFoldable = false
             };
 
-            Horse myHorseTwo = new Horse
-            {
-                Color = "White",
-                Age = 3,
-                Breed = "Friesian",
-                ManeLength = 1.5,
-                IsVaccinated = true
-            };
+            myTableTwo.DisplayDetails();
 
-            Horse myHorseThree = new Horse
-            {
-                Color = "Black",
-                Age = 7,
-                Breed = "Arabian",
-                ManeLength = 0.9,
-                IsVaccinated = false
-            };
+            #endregion
 
+            #region Task 6: Initialization of the 3rd instance of the "Item" class using a constructor that initializes all fields
+
+            Console.WriteLine("--------------Task 6--------------");
+            Item myItemOne = new Item("Book", "1234567890", 29.99);
+            myItemOne.DisplayDetails();
+
+            #endregion
+
+            #region Task 7: Creating an instance of the "Item" class with an empty constructor
+
+            Console.WriteLine("--------------Task 7--------------");
+            Item myItemTwo = new();
+            myItemTwo.Name = "Pen";
+            myItemTwo.DisplayDetails();
+
+            #endregion
+
+            #region Task 8: Creating an instance of the "Item" class with a constructor that initializes 1-2 fields
+
+            Console.WriteLine("--------------Task 8--------------");
+            Item myItemThree = new Item("Notebook");
+            myItemThree.DisplayDetails();
+
+            #endregion
+
+            #region Task 9: Creating a 3rd instance of the "Item" class using a constructor that initializes all fields
+
+            Console.WriteLine("--------------Task 9--------------");
+            Item myItemFour = new Item("Phone", "375441811687", 999.99);
+            myItemFour.DisplayDetails();
+
+            #endregion
+
+            #region Task 10: Calling the method for changing the grafting status for an instance of the "Horse" class
+
+            Console.WriteLine("--------------Task 10-------------");
+            myHorse.UpdateVaccinationStatus(400);
+            myHorse.DisplayDetails();
+
+            #endregion
+
+            #region Task 11: Methods with private and internal modifiers
+
+            // The compiler will highlight an error when calling private and internal methods
+            //myHorse.PrivateMethod();
+            //myHorse.InternalMethod();
+
+            #endregion
+
+            #region Task 12: Creating the 4th instance of the "Horse" class without declaring the field used in the method
+
+            Console.WriteLine("--------------Task 12-------------");
             Horse myHorseFour = new Horse
             {
-                Color = "Brown",
+                Color = "White",
                 Age = 5,
-                Breed = "Quarter Horse",
-                ManeLength = 1.2,
+                Breed = "Thoroughbred",
+                ManeLength = 1.2
+            };
+
+            myHorseFour.UpdateVaccinationStatus(200);
+            myHorseFour.DisplayDetails();
+
+            #endregion
+
+            #region Task 13: Assigning a default value to one of the fields
+
+            Console.WriteLine("--------------Task 13-------------");
+            Horse myHorseFive = new Horse
+            {
+                Color = "Brown",
+                Age = 6,
+                Breed = "Mustang",
+                ManeLength = 0.9,
                 IsVaccinated = true
             };
 
-            myHorseOne.UpdateVaccinationStatus(400);
+            Console.WriteLine("Age: " + myHorseFive.Age);
 
-            myHorseThree.PublicMethod();    
-            // Вызов публичного метода
-            // myHorse.PrivateMethod(); 
-            // Error Line: Нельзя вызвать приватный метод вне класса Horse                         
-            // myHorse.InternalMethod(); 
-            // Error Line: Нельзя вызвать внутренний метод вне сборки
-
-            Horse.InternalMethodCaller(myHorseThree);  // Вызов внутреннего метода с использованием метода-обертки
-
-            myHorseFour.UpdateVaccinationStatus(200);
+            #endregion
 
             Console.ReadKey();
-            Console.WriteLine();
-
-            Console.WriteLine("My horse 0 details:");
-            Console.WriteLine("Color: " + myHorse.Color);
-            Console.WriteLine("Age: " + myHorse.Age);
-            Console.WriteLine("Breed: " + myHorse.Breed);
-            Console.WriteLine("Mane Length: " + myHorse.ManeLength);
-            Console.WriteLine("Vaccination Status: " + (myHorse.IsVaccinated ? "Vaccinated" : "Not Vaccinated"));
-
-            Console.WriteLine();
-
-            Console.WriteLine("My horse 1 details:");
-            Console.WriteLine("Color: " + myHorseOne.Color);
-            Console.WriteLine("Age: " + myHorseOne.Age);
-            Console.WriteLine("Breed: " + myHorseOne.Breed);
-            Console.WriteLine("Mane Length: " + myHorseOne.ManeLength);
-            Console.WriteLine("Vaccination Status: " + (myHorseOne.IsVaccinated ? "Vaccinated" : "Not Vaccinated"));
-
-            Console.WriteLine();
-
-            Console.WriteLine("My horse 2 details:");
-            Console.WriteLine("Color: " + myHorseTwo.Color);
-            Console.WriteLine("Age: " + myHorseTwo.Age);
-            Console.WriteLine("Breed: " + myHorseTwo.Breed);
-            Console.WriteLine("Mane Length: " + myHorseTwo.ManeLength);
-            Console.WriteLine("Vaccination Status: " + (myHorseTwo.IsVaccinated ? "Vaccinated" : "Not Vaccinated"));
-
-            Console.WriteLine();
-
-            Console.WriteLine("My horse 3 details:");
-            Console.WriteLine("Color: " + myHorseThree.Color);
-            Console.WriteLine("Age: " + myHorseThree.Age);
-            Console.WriteLine("Breed: " + myHorseThree.Breed);
-            Console.WriteLine("Mane Length: " + myHorseThree.ManeLength);
-            Console.WriteLine("Vaccination Status: " + (myHorseThree.IsVaccinated ? "Vaccinated" : "Not Vaccinated"));
-
-            Console.WriteLine();
-
-            Console.WriteLine("My horse 4 details:");
-            Console.WriteLine("Color: " + myHorseFour.Color);
-            Console.WriteLine("Age: " + myHorseFour.Age);
-            Console.WriteLine("Breed: " + myHorseFour.Breed);
-            Console.WriteLine("Mane Length: " + myHorseFour.ManeLength);
-            Console.WriteLine("Vaccination Status: " + (myHorseFour.IsVaccinated ? "Vaccinated" : "Not Vaccinated"));
-
-            Console.WriteLine("Press Enter to continue");
-            Console.ReadKey();
-            
-
-            // Создание объектов с использованием различных конструкторов
-            Item item1 = new Item("Book", 5, 10.99m);
-            Item item2 = new Item();
-            Item item3 = new Item("Pen");
-
-            // Вывод деталей каждого предмета
-            item1.DisplayDetails();
-            item2.DisplayDetails();
-            item3.DisplayDetails();
         }
-
-        
-      
-
     }
 }

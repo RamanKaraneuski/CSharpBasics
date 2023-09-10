@@ -1,0 +1,11 @@
+[
+  {
+    "keyword": "Data",
+    "locationCountry": "Armenia",
+    "locationCity": "Gyumri",
+    "skillsOne": "Solution Architecture",
+    "skillsTwo": "Technology and Business Consulting",
+    "expectedResults": ["Data", "Armenia", "Gyumri", "Solution Architecture", "Technology and Business Consulting"]
+  }
+]
+  

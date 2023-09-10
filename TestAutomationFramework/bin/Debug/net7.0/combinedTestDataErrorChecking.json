@@ -1,0 +1,12 @@
+[
+  {
+    "keyword": "Datafew",
+    "locationCountry": "Armenia",
+    "locationCity": "Gyumri",
+    "skillsOne": "Solution Architecture",
+    "skillsTwo": "Technology and Business Consulting",
+    "expectedResults": ["Datafew", "Armenia", "Gyumri", "Solution Architecture", "Technology and Business Consulting"],
+    "errorMessage": "Sorry, your search returned no results. Please try another combination."
+  }
+]
+  

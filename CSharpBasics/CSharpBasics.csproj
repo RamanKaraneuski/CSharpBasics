@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NuGet.Frameworks" Version="6.7.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.12.4" />
+  </ItemGroup>
+
 </Project>

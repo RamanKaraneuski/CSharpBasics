@@ -3,6 +3,7 @@ bin/
 obj/
 debug/
 .vs/
+packages/
 
 # Файлы
 *.exe

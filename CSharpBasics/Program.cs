@@ -23,8 +23,12 @@ namespace CSharpBasics
         {
 
 
+     
+            //Первый вариант
+
 
             //Первый вариант
+
 
             int a = 5;
             double b = 5.56;
@@ -365,7 +369,11 @@ namespace CSharpBasics
             Console.WriteLine($"Total amount due: {finalprice} $.");
 
             Console.WriteLine("\nPress Enter to continue\n");
+
             Console.ReadLine();
+
+            Console.ReadLine(); 
+
         }
 
         public void Task_6()

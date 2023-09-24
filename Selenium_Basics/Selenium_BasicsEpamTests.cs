@@ -12,7 +12,7 @@ namespace Selenium_Basics
         private const string OurWorkUrl = BaseUrl + "/services/client-work";
 
         private By ExploreOurClientWorkLocator = By.XPath("//a[contains(@class, 'bold-underlined-hover') and @href='/services/client-work']");
-
+      
         [SetUp]
         public void Setup()
         {

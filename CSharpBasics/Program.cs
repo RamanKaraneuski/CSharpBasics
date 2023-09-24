@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics.Metrics;
 using System.Numerics;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace CSharpBasics
 {
-    /*class Homework_1
+    class Homework_1
     {
         static void Main(string[] args)
         {
@@ -21,9 +21,6 @@ namespace CSharpBasics
 
         public void Task_1()
         {
-
-
-     
             //Первый вариант
 
             int a = 5;
@@ -48,7 +45,7 @@ namespace CSharpBasics
 
         public void Task_2()
         {
-            Первый вариант
+            //Первый вариант
             Console.WriteLine("Введите имя:");
             string firstName = Console.ReadLine();
 
@@ -58,7 +55,6 @@ namespace CSharpBasics
             int age;
             Console.WriteLine("Введите Возраст");
             string ageInput = Console.ReadLine();
-
 
             if (int.TryParse(ageInput, out age))
             {
@@ -70,30 +66,27 @@ namespace CSharpBasics
                 Console.WriteLine("Возраст должен быть числом.");
             }
 
-
             Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
             Console.ReadLine();
 
-            Второй вариант
+            //Второй вариант
             Console.WriteLine("Введите имя, фамилию и возраст через пробел:");
             string input = Console.ReadLine();
             string[] inputParts = input.Split(' ');
 
-            Trim() Удаляет символы пробелы из начала и конца строки
+            //Trim() Удаляет символы пробелы из начала и конца строки
             string firstName1 = inputParts[0].Trim();
             string lastName1 = inputParts[1].Trim();
             var age1 = inputParts[2].Trim();
-            int age = int.TryParse(inputParts[2].Trim(), out int parsedAge) ? parsedAge : 0;
+            int age2 = int.TryParse(inputParts[2].Trim(), out int parsedAge) ? parsedAge : 0;
 
             Console.WriteLine("\"Сколько вам лет?\", - спросил полицейский.");
             Console.WriteLine("\"{0}\", - {1} {2} ответил.\n", age1, firstName1, lastName1);
-
-
         }
 
         public void Task_3()
         {
-            Первый вариант решения
+            //Первый вариант решения
 
             Console.WriteLine("Введите 3-4 слова через Enter:");
 
@@ -102,7 +95,7 @@ namespace CSharpBasics
             string word3 = Console.ReadLine();
             string word4 = Console.ReadLine();
 
-             .Join("") Если так то слова слипнуться, а ессли .Join("") то добавится пробел.По ТЗ вроде не нада пробел
+            //.Join("") Если так то слова слипнуться, а ессли .Join("") то добавится пробел.По ТЗ вроде не нада пробел
             Console.WriteLine("\n" + string.Join("", $" Результат командой Join   ", word1, word2, word3, word4));
 
             Console.WriteLine(string.Concat($" Результат командой Concat ", word1, word2, word3, word4));
@@ -110,8 +103,7 @@ namespace CSharpBasics
             Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
             Console.ReadLine();
 
-
-            Второй вариант решения
+            //Второй вариант решения
 
             Console.WriteLine("Введите 3-4 слова через пробел:");
 
@@ -125,7 +117,7 @@ namespace CSharpBasics
             Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
             Console.ReadLine();
 
-            Третий вариант решения
+            //Третий вариант решения
 
             Console.WriteLine("Введите 3-4 слова через пробел:");
             string Input = Console.ReadLine();
@@ -150,7 +142,7 @@ namespace CSharpBasics
             string substring1 = inputWords.Substring(2);
             string substring2 = inputWords.Substring(0, 3);
 
-            string[] substrings = { substring1, substrin2 };
+            string[] substrings = { substring1, substring2 };
             Console.WriteLine("Результат командой Join:");
             Console.WriteLine(string.Join(" --→ ", substring1, substring2));
 
@@ -175,7 +167,7 @@ namespace CSharpBasics
 
         public void Task_6()
         {
-            Первый вариантан
+            //Первый вариантан
 
             Console.WriteLine("Введите букву в нижнем регистре:");
 
@@ -184,7 +176,7 @@ namespace CSharpBasics
 
             Console.WriteLine($"Результат: {uppeLetter}\n");
 
-            Второйервый вариантан
+            //Второйервый вариантан
 
             Console.WriteLine("Введите букву в нижнем регистре:");
 
@@ -201,7 +193,6 @@ namespace CSharpBasics
             Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
             Console.ReadLine();
         }
-
 
         public void Task_7()
         {
@@ -223,9 +214,7 @@ namespace CSharpBasics
             Console.WriteLine("Результат объединения:\n");
             Console.WriteLine(result);
         }
-
     }
-    */
 
     class Homework_2
     {
@@ -365,7 +354,11 @@ namespace CSharpBasics
             Console.WriteLine($"Total amount due: {finalprice} $.");
 
             Console.WriteLine("\nPress Enter to continue\n");
+
+            Console.ReadLine();
+
             Console.ReadLine(); 
+
         }
 
         public void Task_6()

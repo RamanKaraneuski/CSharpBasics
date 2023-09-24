@@ -26,6 +26,10 @@ namespace CSharpBasics
      
             //Первый вариант
 
+
+            ////Первый вариант
+
+
             int a = 5;
             double b = 5.56;
             char c = 'c';

@@ -19,9 +19,6 @@ namespace CSharpBasics
 
         public void Task_1()
         {
-
-
-
             ////Первый вариант
 
             int a = 5;
@@ -57,7 +54,6 @@ namespace CSharpBasics
             Console.WriteLine("Введите Возраст");
             string ageInput = Console.ReadLine();
 
-
             if (int.TryParse(ageInput, out age))
             {
                 Console.WriteLine($"\"How old are you?\", - policemen asked.");
@@ -67,7 +63,6 @@ namespace CSharpBasics
             {
                 Console.WriteLine("Возраст должен быть числом.");
             }
-
 
             Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
             Console.ReadLine();
@@ -85,7 +80,6 @@ namespace CSharpBasics
 
             Console.WriteLine("\"Сколько вам лет?\", - спросил полицейский.");
             Console.WriteLine("\"{0}\", - {1} {2} ответил.\n", age1, firstName1, lastName1);
-
 
         }
 
@@ -107,7 +101,6 @@ namespace CSharpBasics
 
             Console.WriteLine("\n Нажмите Enter чтобы продолжить \n");
             Console.ReadLine();
-
 
             // Второй вариант решения
 
@@ -200,7 +193,6 @@ namespace CSharpBasics
             Console.ReadLine();
         }
 
-
         public void Task_7()
         {
             Console.WriteLine("Введите 3-4 строки через Enter:");
@@ -221,6 +213,5 @@ namespace CSharpBasics
             Console.WriteLine("Результат объединения:\n");
             Console.WriteLine(result);
         }
-
     }
 }
